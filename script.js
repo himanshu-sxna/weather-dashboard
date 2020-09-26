@@ -106,7 +106,7 @@ $(document).ready(function() {
 
         $.ajax({
 
-            url: "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=" + apiKey,
+            url: "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=" + apiKey,
             method: "GET", 
             success: function (UVresponse) {
 
