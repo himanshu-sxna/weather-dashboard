@@ -1,0 +1,29 @@
+/* size and background for weather icons */
+img {
+    height: 50px;
+    width: 50px;
+    background-color: #bfd8d9;
+}
+
+/* hide all images on start */
+#weather-icon,
+#uvbtn,
+#iconday1,
+#iconday2,
+#iconday3,
+#iconday4,
+#iconday5  {
+    display: none;
+}
+
+/* spacing between main card weather icon and description */
+#forecast-div img {
+    margin-bottom: 10px;
+}
+
+/* width for forecast card*/
+#forecast-div .card {
+
+    max-width: fit-content;
+}
+

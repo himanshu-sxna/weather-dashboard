@@ -16,101 +16,129 @@
 </head>
 <body>
     <div class="container">
+      <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <form class="d-flex input-group w-auto mb-2 mr-3">
-                <input type="search" class="form-control" placeholder="Your city" aria-label="Search"/>
-                <button class="btn btn-dark" type="button" data-ripple-color="info">Search</button>
+                <input type="search" class="form-control" placeholder="Your city" aria-label="Search" id="searchInput"/>
+                <button id="searchbtn" class="btn btn-dark" type="button" data-ripple-color="info">Search</button>
               </form>
+              <!-- Dropdown menu -->
               <nav class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle link-dark disabled" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"aria-expanded="false"> My Cities</a>
-          <!-- Dropdown menu -->
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Sydney</a></li>
-            <li><a class="dropdown-item" href="#">Adelaide</a></li>
-          </ul>
-        </nav>
+                <a class="nav-link dropdown-toggle link-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"aria-expanded="false"> My Cities</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                </ul>
+              </nav>
             </div>
         </nav>
 
+        <!-- Main Weather Card-->
         <div class="row ml-auto mr-auto mt-3">
             <div class="card bg-light mb-3 ml-auto mr-auto">
-                <div class="card-header">Date & Time</div>
+                <div class="card-header">
+                  <h4 id="city-name"></h4>
+                </div>
                 <div class="card-body">
-                  <h5 class="card-title">Adelaide, AU</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="card-text" id="curr-date"></p>
+                  <img class="rounded" id="weather-icon" src="" alt="Weather Icon.png"></img>
+                  <p class="card-text" ><strong id="weather-desc" ></strong>
                   </p>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="card-text" id="temp">
                   </p>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="card-text" id="feels-like">
                   </p>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="card-text" id="humidity">
                   </p>
+                  <p class="card-text" id="wind">
+                  </p>
+                  <p class="card-text" id="uvbtn">
+                    <button class="btn btn-warning text-dark btn-sm" type="button" data-toggle="collapse" data-target="#uvindexdiv" aria-expanded="false" aria-controls="uvindexdiv">
+                      UV Index
+                    </button>
+                  </p>
+                  <div class="card collapse" id="uvindexdiv">
+                    <div class="card-header">
+                      <h5 class="" id="uvindex"></h5>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text" id="uvindex-rating"> High</p>
+                      <p class="card-text" id="uvindex-desc">
+                      </p>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="row d-flex flex- justify-content-center">
-            <div class="card text-white bg-primary mb-3" style="max-width: 10rem;">
-                <div class="card-header">Header</div>
+        <!-- Forecast Cards-->
+        <h2 class="text-center" id="forecast-header"> 5 Day Forecast </h2>
+        <div class="row d-flex flex- justify-content-center" id="forecast-div">
+            <div class="card text-center bg-light mb-3 mr-2" id="Card1">
                 <div class="card-body">
-                  <h5 class="card-title">Primary card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="bg-dark text-white rounded" id="head1"></p>
+                  <img class="rounded" id="iconday1" src="" alt="Weather Icon.png"></img>
+                  <p class="card-title" ><strong id="desc1"></strong></p>
+                  <p class="card-text" id="temp1">
+                  </p>
+                  <p class="card-text" id="humidity1">
+                  </p>
+                  <p class="card-text" id="uvindex1">
                   </p>
                 </div>
               </div>
-              <div class="card text-white bg-secondary ml-2 mb-3" style="max-width: 10rem;">
-                <div class="card-header">Header</div>
+              <div class="card text-center bg-light mb-3 mr-2" id="Card2">
                 <div class="card-body">
-                  <h5 class="card-title">Secondary card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="bg-dark text-white rounded" id="head2"></p>
+                  <img class="rounded" id="iconday2" src="" alt="Weather Icon.png"></img>
+                  <p class="card-title" ><strong id="desc2"></strong></p>
+                  <p class="card-text" id="temp2">
+                  </p>
+                  <p class="card-text" id="humidity2">
+                  </p>
+                  <p class="card-text" id="uvindex2">
                   </p>
                 </div>
               </div>
-              <div class="card text-white bg-success ml-2 mb-3" style="max-width: 10rem;">
-                <div class="card-header">Header</div>
+              <div class="card text-center bg-light mb-3 mr-2" id="Card3">
                 <div class="card-body">
-                  <h5 class="card-title">Success card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="bg-dark text-white rounded" id="head3"></p>
+                  <img class="rounded" id="iconday3" src="" alt="Weather Icon.png"></img>
+                  <p class="card-title" ><strong id="desc3"></strong></p>
+                  <p class="card-text" id="temp3">
+                  </p>
+                  <p class="card-text" id="humidity3">
+                  </p>
+                  <p class="card-text" id="uvindex3">
                   </p>
                 </div>
               </div>
-              <div class="card text-white bg-danger ml-2 mb-3" style="max-width: 10rem;">
-                <div class="card-header">Header</div>
+              <div class="card text-center bg-light mb-3 mr-2" id="Card4">
                 <div class="card-body">
-                  <h5 class="card-title">Danger card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="bg-dark text-white rounded" id="head4"></p>
+                  <img class="rounded" id="iconday4" src="" alt="Weather Icon.png"></img>
+                  <p class="card-title" ><strong id="desc4"></strong></p>
+                  <p class="card-text" id="temp4">
+                  </p>
+                  <p class="card-text" id="humidity4">
+                  </p>
+                  <p class="card-text" id="uvindex4">
                   </p>
                 </div>
               </div>
-              <div class="card bg-warning ml-2 mb-3" style="max-width: 10rem;">
-                <div class="card-header">Header</div>
+              <div class="card text-center bg-light mb-3" id="Card5">
                 <div class="card-body">
-                  <h5 class="card-title">Warning card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  <p class="bg-dark text-white rounded" id="head5"></p>
+                  <img class="rounded" id="iconday5" src="" alt="Weather Icon.png"></img>
+                  <p class="card-title" ><strong id="desc5"></strong></p>
+                  <p class="card-text" id="temp5">
+                  </p>
+                  <p class="card-text" id="humidity5">
+                  </p>
+                  <p class="card-text" id="uvindex5">
                   </p>
                 </div>
               </div>
+              
         </div>
         <footer class="bg-light text-center text-lg-left">
             <div class="text-center p-3">
@@ -121,7 +149,10 @@
     </div>
 
 
-    
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Luxon-->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
     <!-- Local script-->
